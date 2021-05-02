@@ -31,7 +31,7 @@
                     <li class='nav-item'><a class = 'nav-link' href='./contactus.html'><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id='modallogin'>
                         <span class='fa fa-sign-in'> Login</span>
                     </a>
                 </span>
@@ -91,7 +91,7 @@
                 </div>
                 <div class='col-xs-12 col-sm-3 align-self-center'>
                     <a class='btn btn-warning nav-link btn-block'
-                        href='#reservationsModal' data-toggle="modal"> Reserve Table </a>
+                        id="reservationsbtn"> Reserve Table </a>
                 </div>
             </div>
         </div>
@@ -350,6 +350,20 @@
                 }
             }); 
                        
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#reservationsbtn').click(function() {
+                $('#reservationsModal').modal();    
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#modallogin').click(function() {
+                $('#loginModal').modal();    
+            });
         });
     </script>
 </body>
